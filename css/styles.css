@@ -172,6 +172,7 @@
 }
 #chartContainer1{
   display: none;
+  width: auto;
 }
 h1{
   text-align: center;
@@ -395,15 +396,16 @@ body{
   grid-template-columns: 1fr 3fr 1fr;
 } */
 
-#chartContainer {
+/* #chartContainer {
   display: none;
 body{
   background-color: #f9e0e7;
-}
+} */
 
 .jumbotron {
   background-color: #9e8189;
 }
+
 
 
 
