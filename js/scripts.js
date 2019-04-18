@@ -7,7 +7,7 @@ var monday1 = new JournalEntry(
   food = "oatmeal with cranberries and pecans",
   drink = "water",
   drinkAmount = 12,
-  general = "woke up earlier than I wanted but am feeling generally well rested"
+  notes = "woke up earlier than I wanted but am feeling generally well rested"
 );
 
 var monday2 = new JournalEntry(
@@ -18,7 +18,7 @@ var monday2 = new JournalEntry(
   food = "chicken with rice, beans, guacamole, and lettuce",
   drink = "orange san pelligrino",
   drinkAmount = 12,
-  general = ""
+  notes = ""
 );
 
 var monday3 = new JournalEntry(
@@ -29,7 +29,7 @@ var monday3 = new JournalEntry(
   food = "roast beef, carrots, potatoes, and snow peas",
   drink = "orange san pelligrino",
   drinkAmount = 12,
-  general = "energy very low this evening"
+  notes = "energy very low this evening"
 );
 
 var tuesday1 = new JournalEntry(
@@ -40,7 +40,7 @@ var tuesday1 = new JournalEntry(
   food = "breakfast sandwich: 1 egg, english muffin, 1 strip bacon",
   drink = "water",
   drinkAmount = 16,
-  general = "Still recovering from illness but feeling much better"
+  notes = "Still recovering from illness but feeling much better"
 );
 // Business logic
 function Journal() {
@@ -65,7 +65,7 @@ Journal.prototype.findJournalEntry = function(id) {
   }
   return false;
 }
-Journal.prototype.editJournalEntry = function(id, sleep, medications, exercises, food, drink, drinkAmount, general) {
+Journal.prototype.editJournalEntry = function(id, sleep, medications, exercises, food, drink, drinkAmount, notes) {
   for (var i = 0; i < this.journalEntries.length; i++) {
     if (this.journalEntries[i]) {
       if (this.journalEntries[i].id == parseInt(id)) {
@@ -75,13 +75,13 @@ Journal.prototype.editJournalEntry = function(id, sleep, medications, exercises,
         this.journalEntries[i].food = food;
         this.journalEntries[i].drink = drink;
         this.journalEntries[i].drinkAmount = drinkAmount;
-        this.journalEntries[i].general = general;
+        this.journalEntries[i].notes = notes;
       }
     }
   }
 };
 
-function JournalEntry(timeDate, sleep, medications, exercises, food, drink, drinkAmount, general) {
+function JournalEntry(timeDate, sleep, medications, exercises, food, drink, drinkAmount, notes) {
   this.timeDate = timeDate,
     this.sleep = sleep,
     this.medications = medications,
@@ -89,7 +89,7 @@ function JournalEntry(timeDate, sleep, medications, exercises, food, drink, drin
     this.food = food,
     this.drink = drink,
     this.drinkAmount = drinkAmount,
-    this.general = general
+    this.notes = notes
 }
 
 Journal.prototype.getSleep = function(id) {
@@ -279,16 +279,16 @@ function listfilteredEntries(journal, property) {
         line += 1;
       }
     });
-  } else if (property === "general") {
-    var filteredEntries = $("#filteredGeneralDates");
+  } else if (property === "notes") {
+    var filteredEntries = $("#filterednotesDates");
     journal.journalEntries.forEach(function(journalEntry) {
-      if (journalEntry.general) {
+      if (journalEntry.notes) {
         if (line % 2 === 1) {
           appliedClass = 'oddRow';
         } else {
           appliedClass = "evenRow";
         }
-        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass} id=${journalEntry.id}><p> ${journalEntry.general}<p></div>`;
+        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass} id=${journalEntry.id}><p> ${journalEntry.notes}<p></div>`;
         line += 1;
       }
     });
@@ -340,8 +340,8 @@ function attachDrinkAmountListeners() {
   });
 }
 
-function attachGeneralListeners() {
-  $("#filteredGeneralDates").on("click", "div", function() {
+function attachnotesListeners() {
+  $("#filterednotesDates").on("click", "div", function() {
     showEntry(this.id);
     $("#notes-back-button").hide();
   });
@@ -376,7 +376,7 @@ function showEntry(entryId) {
   $(".food").html(entry.food);
   $(".drink").html(entry.drink);
   $(".drinkAmount").html(entry.drinkAmount)
-  $(".general").html(entry.general);
+  $(".notes").html(entry.notes);
 }
 
 function clearFields() {
@@ -420,7 +420,7 @@ $(document).ready(function() {
   attachFoodListeners();
   attachDrinkListeners();
   attachDrinkAmountListeners();
-  attachGeneralListeners();
+  attachnotesListeners();
 
   // Add sample data included above
   journal.addJournalEntry(monday1);
@@ -583,7 +583,7 @@ $(document).ready(function() {
     $("#check-buttons").slideUp();
     $("#notes-table").slideDown();
     $("#dates").slideUp();
-    var property = "general";
+    var property = "notes";
     listfilteredEntries(journal, property);
     $("#notes-table-row").show();
   });
@@ -628,7 +628,7 @@ $(document).ready(function() {
     var food = $("#editFood").html();
     var drink = $("#editDrink").html();
     var drinkAmount = $("#editDrinkAmount").html();
-    var general = $("#editGeneral").html();
+    var notes = $("#editnotes").html();
 
     if (parseInt(sleep) < 0 || isNaN(parseInt(sleep))) {
       alert ("Please enter a 0 or a positive number for Sleep");
@@ -636,6 +636,6 @@ $(document).ready(function() {
     if (parseInt(drinkAmount) < 0 || isNaN(parseInt(drinkAmount))) {
       alert ("Please enter a 0 or a positive number for Drink Amount");
     }
-    journal.editJournalEntry(id, sleep, medications, exercises, food, drink, drinkAmount, general);
+    journal.editJournalEntry(id, sleep, medications, exercises, food, drink, drinkAmount, notes);
   });
 });
