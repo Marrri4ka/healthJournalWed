@@ -1,14 +1,14 @@
-# Health Journal
+# Health Journal ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
-#### A program that allows a user to track their sleep, medications, food, drink, and exercises.
+#### A program that allows a user to track their sleep, medications, food, drink, and exercises, 04/18/2019
 
-#### By **Tessa Sullivan, Stephen Trewick, Mariia Stashuk**
+#### By **Tessa Sullivan, Stephen Trewick, Mariia Stashuk, Maya Frame**
 
 ## Description
 
 A journal where a user can track their sleep, medications, food, drink, and exercises.  They can see previous entries as well as see trends in food, sleep, etc.
 
-https://tessasullivan.github.io/healthJournal
+
 
 ### Specs
 | Spec | Input | Output |
@@ -32,8 +32,8 @@ https://tessasullivan.github.io/healthJournal
 
 ## Setup/Installation Requirements
 
-1. Clone this repository.
-2. Open your browser and navigate to index.html
+1. Clone this repository https://github.com/Marrri4ka/healthJournalWed
+2.  Open index.html with your browser of choice or open
 3. Enjoy!
 
 
@@ -51,10 +51,10 @@ https://tessasullivan.github.io/healthJournal
 
 ## Support and contact details
 
-_Contact Tessa Sullivan @ tessa.sullivan@gmail.com_
+If you have any questions or problems, please contact  Tessa Sullivan @ tessa.sullivan@gmail.com, Mariia Stashuk (mariiapopovych@gmail.com), Maya Frame (mayacframe@gmail.com), Stephen Trewick (Stephent818@gmail.com)
 
 ### License
 
 *{This software is licensed under the MIT license}*
 
-Copyright (c) 2019 **_Tessa Sullivan, Stephen Trewick, Mariia Stashuk_**
+Copyright (c) 2019 **_Tessa Sullivan, Stephen Trewick, Mariia Stashuk, Maya Frame_**
