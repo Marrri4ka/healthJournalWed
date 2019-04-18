@@ -1,13 +1,72 @@
+
 /* .emptyField {
   color: gray;
   font-style: italic;
 } */
-.slides{
+
+.everything{
   display: none;
 }
 
 #slide1 {
+  font-size: 60px;
+  font-family: cursive;
+  font-weight: bold;
+  opacity: .8;
+  text-align: center;
+  color: #4d0000;
+  padding-top: 11%;
+}
+
+#welcome {
+  font-size: 60;
+  font-weight: bolder;
+}
+
+#slide2 {
   text-align:center;
+}
+
+#slide2-bubble2 {
+    font-size: 50px;
+    padding-top: 14%;
+}
+
+#slide2-bubble3 {
+  font-size: 50px;
+  padding-top: 22%;
+}
+
+#slide-buttons{
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 9%;
+  width: 700px;
+}
+
+#slide3-button1 {
+  background-color: #ffb3b3;
+  color: black;
+  font-size: 40px;
+  width: 700px;
+}
+
+#slide3-button2 {
+  background-color: #ff8080;
+  color: black;
+  font-size: 30px;
+  width: 450px;
+  margin-left: 18%;
+  margin-right: 25%;
+}
+
+#lets-start {
+  background-color: #ff3333;
+  color: black;
+  font-size: 20px;
+  width: 300px;
+  margin-left: 29%;
+  margin-right: 30%;
 }
 
 .circle {
@@ -99,6 +158,7 @@
 
 #slide1, #slide2, #slide3 {
   height: 500px;
+  background-color: #ffe6e6;
 }
 #chartContainer{
   display: none;
@@ -217,7 +277,7 @@ background-color: #4285F4; }
 
 .center {
 	position: absolute;
-	top: 17%;
+	top: 7%;
 	left: 25%;
 	transform: translate(-50%,-50%);
 	padding: 40px;

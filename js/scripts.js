@@ -615,6 +615,11 @@ $(document).ready(function() {
     $("#chartContainer1").slideDown();
   })
 
+  $("#lets-start").click(function(){
+    $(".everything").slideDown();
+    $(".slides").slideUp();
+  });
+
   $("#editEntry").click(function() {
     var id = $("#editId").html();
     var sleep = $("#editSleep").html();
