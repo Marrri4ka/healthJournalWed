@@ -4,14 +4,15 @@
 <head>
   <meta charset="utf-8">
 
+  <script src="js/jquery-3.4.0.js"></script>
+  <script src="js/scripts.js"></script>
+
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/jquery-3.4.0.js"></script>
-  <script src="js/scripts.js"></script>
 
   <title>Health Journal</title>
 </head>
@@ -19,267 +20,301 @@
 
 <body>
   <div class="container">
-
     <div class="jumbotron">
-
-
       <h1>Health Journal </h1>
       <div class="center">
         <div class="heart">
         </div>
       </div>
-
-
-
-
     </div>
-    <div class="center">
-      <div class="heart"></div>
-    </div>
-  </div>
+    <div class="slides">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div id="slide1" class="card-body bg-secondary">
+              <div class="circle circle1">
+                <a href="#section_1">
+                  <h2>1<small>st</small>
+                    <p>Title</p>
+                  </h2>
+                </a>
+              </div>
+              <div class="circle circle2">
+                <a href="#section_2">
+                  <h2>2<small>nd</small>
+                    <p>Title</p>
+                  </h2>
+                </a>
+              </div>
+              <div class="circle circle3">
+                <a href="#section_3">
+                  <h2>3<small>nd</small>
+                    <p>Title</p>
+                  </h2>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div id="slide2" class="card-body bg-secondary">
 
-  <div class="row">
-    <div id="form" class="col-md-6">
-      <div class="card card-info">
-        <div class="card-header bg-secondary text-white">
-          Fill the form
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div id="slide3" class="card-body bg-secondary">
+            </div>
+          </div>
         </div>
-        <div class="card-body">
-          <form id="formOne">
-            <div class="form-group">
-              <label for="sleep">Sleep</label><img src="img/sleep-icon.svg">
-              <input class="form-control" type="number" id="sleep">
-            </div>
-
-            <div class="form-group">
-              <label for="medications">Medications</label><img src="img/medication-icon.svg">
-              <textarea class="form-control" id="medications" rows="3"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="exercise">Exercise</label><img src="img/exercise-icon.svg">
-              <textarea class="form-control" type="text" id="exercise" rows="3"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="food">Food</label><img src="img/food-icon.svg">
-              <input class="form-control" type="text" id="food">
-            </div>
-            <div class="form-group">
-              <label for="drink">Drink</label><img src="img/drink.svg">
-              <input class="form-control" type="text" id="drink">
-            </div>
-
-            <div class="form-group">
-              <label for="drink-amount">Drink amount</label><img src="img/amount.svg">
-              <input class="form-control" type="number" id="drink-amount">
-            </div>
-            <div class="form-group">
-              <label for="notes">Notes</label><img src="img/notes-icon.svg">
-              <textarea class="form-control" id="notes" rows="3"></textarea>
-            </div>
-            <button class="btn-danger" type="submit" name="button">Submit</button>
-          </form>
-        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </div>
-    <div id="check-buttons" class="col-md-2">
-      <div class="card card-info">
-        <div class="card-header bg-secondary text-white">
-          Buttons
-        </div>
-        <div class="card-body">
-          <button id="sleep-button" type="button" class="btn btn-light text-black btn-sm btn-block">Sleep Table</button>
-          <button id="medication-button" type="button" class="btn btn-light text-black btn-sm btn-block">Medication Table</button>
-          <button id="exercise-button" type="button" class="btn btn-light  text-black btn-sm btn-block">Exercise Table</button>
-          <button id="food-button" type="button" class="btn btn-light text-black btn-sm btn-block">Food Table</button>
-          <button id="drink-button" type="button" class="btn btn-light text-black  btn-sm btn-block">Drink Table</button>
-          <button id="drink-amount-button" type="button" class="btn btn-light text-black btn-sm btn-block">Drink Amount</button>
-          <button id="notes-button" type="button" class="btn btn-light text-black btn-sm btn-block">Notes Table</button>
-        </div>
-
-      </div>
-    </div>
-
-    <div id="dates" class="col-md-3">
-      <div class="card card-info">
-        <div class="card-header bg-secondary text-white">
-          Dates
-        </div>
-        <div class="scrollbar scrollbar-dark">
-          <div class="force-overflow">
+    <div class="everything">
+      <div class="row">
+        <div id="form" class="col-md-6">
+          <div class="card card-info">
+            <div class="card-header bg-secondary text-white">
+              Fill the form
+            </div>
             <div class="card-body">
-              <div id="all-dates">
+              <form id="formOne">
+                <div class="form-group">
+                  <label for="sleep">Sleep</label><img src="img/sleep-icon.svg">
+                  <input class="form-control" type="number" id="sleep">
+                </div>
+
+                <div class="form-group">
+                  <label for="medications">Medications</label><img src="img/medication-icon.svg">
+                  <textarea class="form-control" id="medications" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="exercise">Exercise</label><img src="img/exercise-icon.svg">
+                  <textarea class="form-control" type="text" id="exercise" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="food">Food</label><img src="img/food-icon.svg">
+                  <input class="form-control" type="text" id="food">
+                </div>
+                <div class="form-group">
+                  <label for="drink">Drink</label><img src="img/drink.svg">
+                  <input class="form-control" type="text" id="drink">
+                </div>
+
+                <div class="form-group">
+                  <label for="drink-amount">Drink amount</label><img src="img/amount.svg">
+                  <input class="form-control" type="number" id="drink-amount">
+                </div>
+                <div class="form-group">
+                  <label for="notes">Notes</label><img src="img/notes-icon.svg">
+                  <textarea class="form-control" id="notes" rows="3"></textarea>
+                </div>
+                <button class="btn-danger" type="submit" name="button">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="check-buttons" class="col-md-2">
+          <div class="card card-info">
+            <div class="card-header bg-secondary text-white">
+              Your data
+            </div>
+            <div class="card-body">
+              <button id="sleep-button" type="button" class="btn btn-light text-black btn-sm btn-block">Sleep Table</button>
+              <button id="medication-button" type="button" class="btn btn-light text-black btn-sm btn-block">Medication Table</button>
+              <button id="exercise-button" type="button" class="btn btn-light  text-black btn-sm btn-block">Exercise Table</button>
+              <button id="food-button" type="button" class="btn btn-light text-black btn-sm btn-block">Food Table</button>
+              <button id="drink-button" type="button" class="btn btn-light text-black  btn-sm btn-block">Drink Table</button>
+              <button id="drink-amount-button" type="button" class="btn btn-light text-black btn-sm btn-block">Drink Amount</button>
+              <button id="notes-button" type="button" class="btn btn-light text-black btn-sm btn-block">Notes Table</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="dates" class="col-md-3">
+          <div class="card card-info">
+            <div class="card-header bg-secondary text-white">
+              Dates
+            </div>
+            <div class="scrollbar scrollbar-dark">
+              <div class="force-overflow">
+                <div class="card-body">
+                  <div id="all-dates">
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div id="sleep-table">
+        <div class="row" id="sleep-table-row">
+          <div class="col-md-9">
+            <div class="card card-info">
+              <div class="card-header bg-secondary">
+                Sleep table
+              </div>
+              <div class="card-body">
+                <!-- <table id="filteredSleepDates"></table> -->
+                <div id="chartContainer" style="height: 300px; width: 100%;">
+                </div>
+                <div id="filteredSleepDates"></div>
 
-  </div>
-  </div>
-  <div id="sleep-table">
-    <div class="row" id="sleep-table-row">
-      <div class="col-md-9">
-        <div class="card card-info">
-          <div class="card-header bg-secondary">
-            Sleep table
-          </div>
-          <div class="card-body">
-            <!-- <table id="filteredSleepDates"></table> -->
-            <div id="chartContainer" style="height: 300px; width: 100%;">
+              </div>
             </div>
-            <div id="filteredSleepDates"></div>
-
+          </div>
+          <div class="col-md-3">
+            <button id="sleep-back-button" class="btn-lg btn-danger back-button-class" type="button" name="button">Back</button>
+            <button id="sleep-chart-button" class="btn-lg btn-success back-button-class" type="button" name="button">Sleep Chart</button>
           </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <button id="sleep-back-button" class="btn-lg btn-danger back-button-class" type="button" name="button">Back</button>
-        <button id="sleep-chart-button" class="btn-lg btn-success back-button-class" type="button" name="button">Sleep Chart</button>
-      </div>
-    </div>
-  </div>
-  <div id="medication-table">
-    <div class="row" id="medication-table-row">
-      <div class="col-md-9">
-        <div class="card card-info">
-          <div class="card-header bg-secondary">
-            Medication table
+      <div id="medication-table">
+        <div class="row" id="medication-table-row">
+          <div class="col-md-9">
+            <div class="card card-info">
+              <div class="card-header bg-secondary">
+                Medication table
+              </div>
+              <div class="card-body">
+                <div id="filteredMedicationsDates"></div>
+              </div>
+            </div>
           </div>
-          <div class="card-body">
-            <div id="filteredMedicationsDates"></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <button id="medication-back-button" class="btn-lg btn-danger back-button-class" type="button" name="button">Back</button>
-      </div>
-    </div>
-  </div>
-  <div id="exercise-table">
-    <div class="row" id="exercise-table-row">
-      <div class="col-md-9">
-        <div class="card card-info">
-          <div class="card-header bg-secondary">
-            Exercise table
-          </div>
-          <div class="card-body">
-            <div id="filteredExercisesDates"></div>
+          <div class="col-md-3">
+            <button id="medication-back-button" class="btn-lg btn-danger back-button-class" type="button" name="button">Back</button>
           </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <button id="exercise-back-button" class="btn-lg btn-danger back-button-class" type="button" name="button">Back</button>
-      </div>
-    </div>
-  </div>
-  <div id="food-table">
-    <div class="row" id="food-table-row">
-      <div class="col-md-9">
-        <div class="card card-info">
-          <div class="card-header bg-secondary">
-            Food table
+      <div id="exercise-table">
+        <div class="row" id="exercise-table-row">
+          <div class="col-md-9">
+            <div class="card card-info">
+              <div class="card-header bg-secondary">
+                Exercise table
+              </div>
+              <div class="card-body">
+                <div id="filteredExercisesDates"></div>
+              </div>
+            </div>
           </div>
-          <div class="card-body">
-            <div id="filteredFoodDates"></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <button id="food-back-button" class="btn-lg btn-danger back-button-class" type="button" name="button">Back</button>
-      </div>
-    </div>
-  </div>
-  <div id="drink-table">
-    <div class="row" id="drink-table-row">
-      <div class="col-md-9">
-        <div class="card card-info">
-          <div class="card-header bg-secondary">
-            Drink table
-          </div>
-          <div class="card-body">
-            <div id="filteredDrinkDates"></div>
+          <div class="col-md-3">
+            <button id="exercise-back-button" class="btn-lg btn-danger back-button-class" type="button" name="button">Back</button>
           </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <button id="drink-back-button" class="btn-lg btn-danger back-button-class" type="button" name="button">Back</button>
-      </div>
-    </div>
-  </div>
-  <div id="drink-amount-table">
-    <div class="row" id="drink-amount-table-row">
-      <div class="col-md-9">
-        <div class="card card-info">
-          <div class="card-header bg-secondary">
-            Drink Amount Table
+      <div id="food-table">
+        <div class="row" id="food-table-row">
+          <div class="col-md-9">
+            <div class="card card-info">
+              <div class="card-header bg-secondary">
+                Food table
+              </div>
+              <div class="card-body">
+                <div id="filteredFoodDates"></div>
+              </div>
+            </div>
           </div>
-          <div class="card-body">
-
-            <div id="chartContainer1" style="height: 300px; width: 100%;"></div>
-            <ul id="filteredDrinkAmountDates"></ul>
+          <div class="col-md-3">
+            <button id="food-back-button" class="btn-lg btn-danger back-button-class" type="button" name="button">Back</button>
           </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <button id="drink-amount-back-button" class="btn-lg btn-danger back-button-class" type="button" name="button">Back</button><br><br>
-        <button id="drink-chart-button" class="btn-lg btn-success back-button-class" type="button" name="button">Drink Chart</button>
-      </div>
-    </div>
-  </div>
-  <div id="notes-table">
-    <div class="row" id="notes-table-row">
-      <div class="col-md-9">
-        <div class="card card-info">
-          <div class="card-header bg-secondary">
-            Notes table
+      <div id="drink-table">
+        <div class="row" id="drink-table-row">
+          <div class="col-md-9">
+            <div class="card card-info">
+              <div class="card-header bg-secondary">
+                Drink table
+              </div>
+              <div class="card-body">
+                <div id="filteredDrinkDates"></div>
+              </div>
+            </div>
           </div>
-          <div class="card-body">
-            <div id="filteredGeneralDates"></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <button id="notes-back-button" class="btn-lg btn-danger back-button-class" type="button" name="button">Back</button>
-      </div>
-    </div>
-  </div>
-  <div id="show-template">
-    <div class="row">
-      <div class="col-md-9">
-        <div class="card card-info">
-          <div class="card-header bg-secondary text-white">
-            Your template for :<p><span id="display-date"></span></p>
-            <h4>Click any line to edit!</h4>
-          </div>
-          <div class="card-body">
-            <p id="hideId">ID: <span id="editId" </span> </p> <p><strong>Sleep:</strong> <span contenteditable="true" id="editSleep" class="sleep contenteditable"></span></p>
-            <p><strong>Medications:</strong> <span contenteditable="true" id="editMeds" class="medications contenteditable"></span></p>
-            <p><strong>Exercises:</strong> <span contenteditable="true" id="editExercises" class="exercises contenteditable"></span></p>
-            <p><strong>Food:</strong> <span contenteditable="true" id="editFood" class="food contenteditable"></span></p>
-            <p><strong>Beverages:</strong> <span contenteditable="true" id="editDrink" class="drink contenteditable"></span></p>
-            <p><strong>Drink Amount:</strong> <span contenteditable="true" id="editDrinkAmount" class="drink contenteditable"></span></p>
-            <p><strong>Notes:</strong> <span contenteditable="true" id="editGeneral" class="general contenteditable"></span></p>
-            <!-- <div id="editEntry"></div> -->
-            <button id="editEntry" class="btn-lg btn-danger editButton" type="button" name="button">Save Changes</button>
+          <div class="col-md-3">
+            <button id="drink-back-button" class="btn-lg btn-danger back-button-class" type="button" name="button">Back</button>
           </div>
         </div>
       </div>
+      <div id="drink-amount-table">
+        <div class="row" id="drink-amount-table-row">
+          <div class="col-md-9">
+            <div class="card card-info">
+              <div class="card-header bg-secondary">
+                Drink Amount Table
+              </div>
+              <div class="card-body">
 
-      <div class="col-md-3">
-        <button id="go-back-button" class="btn-lg btn-danger" type="button" name="button">Go Back</button>
+                <div id="chartContainer1" style="height: 300px; width: 100%;"></div>
+                <ul id="filteredDrinkAmountDates"></ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <button id="drink-amount-back-button" class="btn-lg btn-danger back-button-class" type="button" name="button">Back</button><br><br>
+            <button id="drink-chart-button" class="btn-lg btn-success back-button-class" type="button" name="button">Drink Chart</button>
+          </div>
+        </div>
+      </div>
+      <div id="notes-table">
+        <div class="row" id="notes-table-row">
+          <div class="col-md-9">
+            <div class="card card-info">
+              <div class="card-header bg-secondary">
+                Notes table
+              </div>
+              <div class="card-body">
+                <div id="filteredGeneralDates"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <button id="notes-back-button" class="btn-lg btn-danger back-button-class" type="button" name="button">Back</button>
+          </div>
+        </div>
+      </div>
+      <div id="show-template">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="card card-info">
+              <div class="card-header bg-secondary text-white">
+                Your template for :<p><span id="display-date"></span></p>
+                <h4>Click any line to edit!</h4>
+              </div>
+              <div class="card-body">
+                <p id="hideId">ID: <span id="editId" </span> </p> <p><strong>Sleep:</strong> <span contenteditable="true" id="editSleep" class="sleep contenteditable"></span></p>
+                <p><strong>Medications:</strong> <span contenteditable="true" id="editMeds" class="medications contenteditable"></span></p>
+                <p><strong>Exercises:</strong> <span contenteditable="true" id="editExercises" class="exercises contenteditable"></span></p>
+                <p><strong>Food:</strong> <span contenteditable="true" id="editFood" class="food contenteditable"></span></p>
+                <p><strong>Beverages:</strong> <span contenteditable="true" id="editDrink" class="drink contenteditable"></span></p>
+                <p><strong>Drink Amount:</strong> <span contenteditable="true" id="editDrinkAmount" class="drink contenteditable"></span></p>
+                <p><strong>Notes:</strong> <span contenteditable="true" id="editGeneral" class="general contenteditable"></span></p>
+                <!-- <div id="editEntry"></div> -->
+                <button id="editEntry" class="btn-lg btn-danger editButton" type="button" name="button">Save Changes</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <button id="go-back-button" class="btn-lg btn-danger" type="button" name="button">Go Back</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-
-
-
-
-
-
-
   </div>
 </body>
 
