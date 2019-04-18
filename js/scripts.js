@@ -336,7 +336,7 @@ function attachDrinkListeners() {
 function attachDrinkAmountListeners() {
   $("#filteredDrinkAmountDates").on("click", "div", function() {
     showEntry(this.id);
-    $("#drinkAmount-back-button").hide();
+    $("#drink-amount-back-button").hide();
   });
 }
 
@@ -502,6 +502,7 @@ $(document).ready(function() {
     $("#check-buttons").slideUp();
     $("#medication-table").slideDown();
     $("#dates").slideUp();
+
     var property = "medications";
     listfilteredEntries(journal, property);
     $("#medication-table-row").show();
@@ -518,6 +519,7 @@ $(document).ready(function() {
     $("#check-buttons").slideUp();
     $("#exercise-table").slideDown();
     $("#dates").slideUp();
+
     var property = "exercises";
     listfilteredEntries(journal, property);
     $("#exercise-table-row").show();
@@ -534,6 +536,7 @@ $(document).ready(function() {
     $("#check-buttons").slideUp();
     $("#food-table").slideDown();
     $("#dates").slideUp();
+
     var property = "food";
     listfilteredEntries(journal, property);
     $("#food-table-row").show();
@@ -550,10 +553,10 @@ $(document).ready(function() {
     $("#check-buttons").slideUp();
     $("#drink-table").slideDown();
     $("#dates").slideUp();
+
     var property = "drink";
     listfilteredEntries(journal, property);
     $("#drink-table-row").show();
-
   });
   $("#drink-back-button").click(function() {
     $("#drink-table").slideUp();
@@ -567,10 +570,11 @@ $(document).ready(function() {
     $("#check-buttons").slideUp();
     $("#drink-amount-table").slideDown();
     $("#dates").slideUp();
+
     var property = "drinkAmount";
     listfilteredEntries(journal, property);
     $("#drink-amount-table-row").show();
-    $("#chartContainer1").slideUp();
+    // $("#chartContainer1").slideUp();
     drinkChart();
   });
   $("#drink-amount-back-button").click(function() {
@@ -585,6 +589,7 @@ $(document).ready(function() {
     $("#check-buttons").slideUp();
     $("#notes-table").slideDown();
     $("#dates").slideUp();
+
     var property = "notes";
     listfilteredEntries(journal, property);
     $("#notes-table-row").show();
@@ -603,7 +608,7 @@ $(document).ready(function() {
     $("#medication-table").hide();
     $("#food-table").hide();
     $("#drink-table").hide();
-    $("#drinkAmount-table").hide();
+    $("#drink-amount-table").hide();
     $("#notes-table").hide();
     $("#dates").slideDown();
     $("#check-buttons").slideDown();
