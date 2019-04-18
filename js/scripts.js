@@ -336,7 +336,7 @@ function attachDrinkListeners() {
 function attachDrinkAmountListeners() {
   $("#filteredDrinkAmountDates").on("click", "div", function() {
     showEntry(this.id);
-    $("#drinkAmount-back-button").hide();
+    $("#drink-amount-back-button").hide();
   });
 }
 
@@ -603,7 +603,7 @@ $(document).ready(function() {
     $("#medication-table").hide();
     $("#food-table").hide();
     $("#drink-table").hide();
-    $("#drinkAmount-table").hide();
+    $("#drink-amount-table").hide();
     $("#notes-table").hide();
     $("#dates").slideDown();
     $("#check-buttons").slideDown();
