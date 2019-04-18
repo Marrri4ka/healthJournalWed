@@ -238,10 +238,10 @@ img {
 ul {
 	list-style-type: none;
 }
-#filteredSleepDates, #filteredMedicationsDates, #filteredExercisesDates, #filteredFoodDates, #filteredDrinkDates,#filteredDrinkAmountDates,#filteredGeneralDates li {
+#filteredSleepDates, #filteredMedicationsDates, #filteredExercisesDates, #filteredFoodDates, #filteredDrinkDates,#filteredDrinkAmountDates,#filterednotesDates li {
   color: blue;
 }
-#filteredSleepDates, #filteredMedicationsDates, #filteredExercisesDates, #filteredFoodDates, #filteredDrinkDates, #filteredDrinkAmountDates,#filteredGeneralDates li:hover {
+#filteredSleepDates, #filteredMedicationsDates, #filteredExercisesDates, #filteredFoodDates, #filteredDrinkDates, #filteredDrinkAmountDates,#filterednotesDates li:hover {
   /* text-decoration: underline; */
   cursor: pointer;
 }
@@ -250,7 +250,7 @@ ul {
 .evenRow {
   background-color: #dddddd;
 }
-#filteredSleepDates, #filteredMedicationsDates, #filteredExercisesDates, #filteredFoodDates, #filteredDrinkDates,#filteredDrinkAmountDates, #filteredGeneralDates {
+#filteredSleepDates, #filteredMedicationsDates, #filteredExercisesDates, #filteredFoodDates, #filteredDrinkDates,#filteredDrinkAmountDates, #filterednotesDates {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 4fr 6fr;
