@@ -210,20 +210,20 @@ function listfilteredEntries(journal, property) {
         } else {
           appliedClass = "evenRow";
         }
-        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass}><p> ${journalEntry.sleep}<p></div>`;
+        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass} id=${journalEntry.id}><p> ${journalEntry.sleep}<p></div>`;
         line += 1;
       }
     });
   } else if (property === "medications") {
     var filteredEntries = $("#filteredMedicationsDates");
     journal.journalEntries.forEach(function(journalEntry) {
-      if (journalEntry.medications) {
+      if (journalEntry.medications && journalEntry.medications != '<span class="emptyField">No_Input_Entered</span>') {
         if (line % 2 === 1) {
           appliedClass = 'oddRow';
         } else {
           appliedClass = "evenRow";
         }
-        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass}><p> ${journalEntry.medications}<p></div>`;
+        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass} id=${journalEntry.id}><p> ${journalEntry.medications}<p></div>`;
         line += 1;
       }
     });
@@ -236,7 +236,7 @@ function listfilteredEntries(journal, property) {
         } else {
           appliedClass = "evenRow";
         }
-        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass}><p> ${journalEntry.exercises}<p></div>`;
+        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass} id=${journalEntry.id}><p> ${journalEntry.exercises}<p></div>`;
         line += 1;
       }
     });
@@ -249,7 +249,7 @@ function listfilteredEntries(journal, property) {
         } else {
           appliedClass = "evenRow";
         }
-        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass}><p> ${journalEntry.food}<p></div>`;
+        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass} id=${journalEntry.id}><p> ${journalEntry.food}<p></div>`;
         line += 1;
       }
     });
@@ -262,7 +262,7 @@ function listfilteredEntries(journal, property) {
         } else {
           appliedClass = "evenRow";
         }
-        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass}><p> ${journalEntry.drink}<p></div>`;
+        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass} id=${journalEntry.id}><p> ${journalEntry.drink}<p></div>`;
         line += 1;
       }
     });
@@ -275,7 +275,7 @@ function listfilteredEntries(journal, property) {
         } else {
           appliedClass = "evenRow";
         }
-        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass}><p> ${journalEntry.drinkAmount  }<p></div>`;
+        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass} id=${journalEntry.id}><p> ${journalEntry.drinkAmount  }<p></div>`;
         line += 1;
       }
     });
@@ -288,7 +288,7 @@ function listfilteredEntries(journal, property) {
         } else {
           appliedClass = "evenRow";
         }
-        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass}><p> ${journalEntry.general}<p></div>`;
+        htmlForfilteredEntries += `<div class=${appliedClass} id=${journalEntry.id}><p>${journalEntry.timeDate}</p></div><div class=${appliedClass} id=${journalEntry.id}><p> ${journalEntry.general}<p></div>`;
         line += 1;
       }
     });
@@ -449,16 +449,16 @@ $(document).ready(function() {
       sleep = 0;
     }
     if (medications === ""){
-      medications = "<span class='emptyField'>Double_Click_to_Edit</span>";
+      medications = "<span class='emptyField'>No_Input_Entered</span>";
     }
     if (exercise === ""){
-      exercise = "<span class='emptyField'>Double_Click_to_Edit</span>";
+      exercise = "<span class='emptyField'>No_Input_Entered</span>";
     }
     if (food === ""){
-      food = "<span class='emptyField'>Double_Click_to_Edit</span>";
+      food = "<span class='emptyField'>No_Input_Entered</span>";
     }
     if (drink === ""){
-      drink = "<span class='emptyField'>Double_Click_to_Edit</span>";
+      drink = "<span class='emptyField'>No_Input_Entered</span>";
     }
     if (isNaN(parseInt(drinkAmount))) {
       drinkAmount = 0;
