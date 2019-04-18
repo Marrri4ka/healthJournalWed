@@ -30,10 +30,19 @@ A journal where a user can track their sleep, medications, food, drink, and exer
 | User can track the drinks they have consumed|User clicks 'Track drinks' button|A list with clickable entries is generated of all journal entries which have contents for that field with the contents of that field displayed|
 | User can track their general journal entries |User clicks 'Track general' button|A list with clickable entries is generated of all journal entries which have contents for that field with the contents of that field displayed|
 
+## Description
+![Alt text](/img/screen1.png)
+![Alt text](/img/screen2.png)
+![Alt text](/img/screen3.png)
+![Alt text](/img/screen4.png)
+![Alt text](/img/screen5.png)
+
+
+
 ## Setup/Installation Requirements
 
 1. Clone this repository https://github.com/Marrri4ka/healthJournalWed
-2.  Open index.html with your browser of choice or open
+2.  Open index.html with your browser of choice or open  https://marrri4ka.github.io/healthJournalWed/
 3. Enjoy!
 
 
