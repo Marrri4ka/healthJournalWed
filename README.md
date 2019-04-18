@@ -42,7 +42,7 @@ A journal where a user can track their sleep, medications, food, drink, and exer
 ## Setup/Installation Requirements
 
 1. Clone this repository https://github.com/Marrri4ka/healthJournalWed
-2.  Open index.html with your browser of choice or open
+2.  Open index.html with your browser of choice or open  https://marrri4ka.github.io/healthJournalWed/
 3. Enjoy!
 
 

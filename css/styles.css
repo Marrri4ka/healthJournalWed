@@ -74,6 +74,11 @@
   margin-left: 29%;
   margin-right: 30%;
   margin-top: 15%;
+  transition: all .2s ease-in-out;
+}
+
+#lets-start:hover {
+  transform: scale(1.1);
 }
 
 .circle {
@@ -370,7 +375,7 @@ body{
 }
 
 .jumbotron {
-
+  margin-top: 5px;
   background-color: #9e8189;
 }
 
@@ -401,10 +406,6 @@ body{
 body{
   background-color: #f9e0e7;
 } */
-
-.jumbotron {
-  background-color: #9e8189;
-}
 
 
 
