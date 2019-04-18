@@ -18,7 +18,7 @@ var monday2 = new JournalEntry(
   food = "chicken with rice, beans, guacamole, and lettuce",
   drink = "orange san pelligrino",
   drinkAmount = 12,
-  notes = ""
+  notes = "yum yum"
 );
 
 var monday3 = new JournalEntry(
@@ -463,7 +463,9 @@ $(document).ready(function() {
     if (isNaN(parseInt(drinkAmount))) {
       drinkAmount = 0;
     }
-
+    if (notes === ""){
+      notes = "<span class='emptyField'>No_Input_Entered</span>";
+    }
     // Now let's get a journal entry
     var date = getDateTime();
     var newEntry = new JournalEntry(date, sleep, medications, exercise, food, drink, drinkAmount, notes);
