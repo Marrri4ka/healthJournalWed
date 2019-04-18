@@ -19,7 +19,8 @@ https://tessasullivan.github.io/healthJournal
 | User can fill out a form with list of medications | User enters information |Journal entry created with that information|
 | User can fill out a form with list of exercises | User enters information |Journal entry created with that information|
 | User can fill out a form with food they have eaten | User enters information |Journal entry created with that information|
-| User can fill out a form with drinks they have consumed | User enters information |Journal entry created with that information|
+| User can fill out a form with the drinks they have consumed | User enters information |Journal entry created with that information|
+| User can fill out a form with the drink amount they have consumed | User enters information |Journal entry created with that information|
 | User can fill out a form with general information | User enters information |Journal entry created with that information|
 | User can view previous entries|Journal entry created|A link is created with timedate stamp and made available to user|
 | User can track the sleep they have gotten|User clicks 'Track sleep' button|A list with clickable entries is generated of all journal entries which have contents for the sleep field with the contents of the sleep field displayed|
