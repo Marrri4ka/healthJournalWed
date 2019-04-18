@@ -46,7 +46,8 @@
   background-color: #ffb3b3;
   color: black;
   font-size: 40px;
-  width: 700px;
+  width: 600px;
+  margin-left: 6.5%;
 }
 
 #slide3-button2 {
@@ -59,12 +60,14 @@
 }
 
 #lets-start {
-  background-color: #ff3333;
+  background-color: #0099ff;
   color: black;
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: bold;
   width: 300px;
   margin-left: 29%;
   margin-right: 30%;
+  margin-top: 15%;
 }
 
 .circle {
