@@ -1,8 +1,10 @@
+.carousel-control-next-icon {
+    color: red;
+    background-color: #1a0000;
+    border-radius: 50px;
+    height: 35px;
 
-/* .emptyField {
-  color: gray;
-  font-style: italic;
-} */
+}
 
 .everything{
   display: none;
